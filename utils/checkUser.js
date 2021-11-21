@@ -7,6 +7,7 @@ module.exports.checkUser = async (interaction) => {
 	const user = await CU.get(interaction.user.id).then(res => {
 		return res[0];
 	});
+	return user;
 	if (!user) {
 
 		const roles = {};
@@ -23,7 +24,7 @@ module.exports.checkUser = async (interaction) => {
 				serveur: JSON.stringify(roles),
 			});
 
-		await CU.create(newUser).then(res =>{
+		await CU.create(newUser).then(res => {
 			console.log(`L'utilisateur ${res} est crée.`);
 		});
 		return false;

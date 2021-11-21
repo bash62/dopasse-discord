@@ -1,0 +1,8 @@
+{
+    "NEW_USER" : {
+        "USERNAME" : "Quelle est le nom de votre personnage ingame ?",
+        "PROFILE_URL" : " Quelle est le lien de votre profile ?",
+        "FIND_US" : "Comment vous nous avez trouvé ?"
+        
+    }
+}

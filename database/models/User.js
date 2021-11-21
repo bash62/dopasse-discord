@@ -33,15 +33,23 @@ const UserSchema = new mongoose.Schema({
 
 	},
 
+	findUs : {
+		type : String,
+		default : null,
+	},
+
 	offers : {
 		passage : {
 			type : String,
+			default: null,
 		},
 		kit : {
 			type : String,
+			default: null,
 		},
 		feedback : {
 			type : String,
+			default: null,
 		},
 	},
 });
