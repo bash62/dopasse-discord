@@ -33,10 +33,6 @@ nums = {
 }
 
 
-
-
-
-
 def scrapp(pages):
         client = pymongo.MongoClient(env.PROC)
         db = client.success_en      

@@ -1,9 +1,13 @@
 const dotenv = require('dotenv').config();
+const mongoose = require('mongoose');
 const { Client, Intents, Collection } = require('discord.js');
 const fs = require('fs');
 
+const { DB_URI } = require('./config.json');
+
 const client = new Client({ intents: 32767 });
 
+mongoose.connect(DB_URI);
 // const client = new Client({ intents: [
 // 	Intents.FLAGS.GUILDS,
 // 	Intents.FLAGS.GUILD_MESSAGES,
