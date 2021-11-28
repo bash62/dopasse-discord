@@ -24,7 +24,7 @@ module.exports = {
 			.addComponents(
 				new MessageButton()
 					.setCustomId('button_kit')
-					.setLabel('Je propose un kit.')
+					.setLabel('Je propose un Pack.')
 					.setStyle('SUCCESS'),
 			);
 

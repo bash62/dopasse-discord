@@ -1,6 +1,7 @@
 const { ROLES_ID, CHANNEL_ID } = require('../config.json');
-const { createChannel } = require('../utils/createChannel');
-const { checkUser } = require('../utils/checkUser');
+const { newUserChannel } = require('../utils/createChannelNewUser');
+const { newUserOffer } = require('../utils/createChannelNewOffer');
+const { checkUser,getUser } = require('../utils/checkUser');
 
 module.exports = {
 	name: 'interactionCreate',
@@ -48,8 +49,10 @@ module.exports = {
 
 
 				const userExist = await checkUser(interaction);
-				console.log(userExist);
-				createChannel(interaction, userExist);
+				if(!userExist) newUserChannel(interaction, userExist);
+				else {
+					newUserOffer(interaction);
+				}
 			}
 			}
 			return;

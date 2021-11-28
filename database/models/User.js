@@ -6,6 +6,10 @@ const UserSchema = new mongoose.Schema({
 		type: String,
 		required : true,
 	},
+	active_channel: {
+		type: String,
+		default: null,
+	},
 
 	ingame_username: {
 		type: String,
